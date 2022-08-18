@@ -1,9 +1,14 @@
 import logo from './logo.svg';
 import './App.css';
+import NavBar from './components/NavBar';
 
 function App() {
+  let i = 0;
+  i= i+1;
+  console.log(i);
   return (
-    <div className="App">
+    <div >
+      <NavBar />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
