@@ -1,28 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
+// css bootstrap
+import 'bootstrap/dist/css/bootstrap.min.css';
 import NavBar from './components/NavBar';
+import Cards from './components/Cards';
+import Footer from './components/Footer';
 
 function App() {
-  let i = 0;
-  i= i+1;
-  console.log(i);
+  
   return (
-    <div >
+    <div className='bg-dark'>
       <NavBar />
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="d-flex justify-content-around ">
+        <Cards />
+        <Cards />
+        <Cards />
+      </div>
+      <Footer />
     </div>
   );
 }
