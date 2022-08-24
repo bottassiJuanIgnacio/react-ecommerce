@@ -14,8 +14,8 @@ export default function Cards() {
     <li className="list-group-item text-bg-secondary">A third item</li>
   </ul>
   <div className="card-body">
-    <a href="#" className="card-link text-bg-secondary">Card link</a>
-    <a href="#" className="card-link text-bg-secondary">Another link</a>
+    <a href="#/" className="card-link text-bg-secondary">Card link</a>
+    <a href="#/" className="card-link text-bg-secondary">Another link</a>
   </div>
 </div>
   )
