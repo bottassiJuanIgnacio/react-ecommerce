@@ -8,28 +8,28 @@ export default function Footer() {
     
     <section className="mb-4">
      
-      <a className="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-        ><i className="fab fa-facebook-f"></i></a>
+      <a className="btn btn-outline-light btn-floating m-1" style={{backgroundColor:"#ffc107"}} href="#!"  role="button"
+        ><i className="fab fa-facebook-f" >Facebook</i></a>
 
       
-      <a className="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-        ><i className="fab fa-twitter"></i></a>
+      <a className="btn btn-outline-light btn-floating m-1" style={{backgroundColor:"#ffc107"}} href="#!"  role="button"
+        ><i className="fab fa-twitter">Twitter</i></a>
 
      
-      <a className="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-        ><i className="fab fa-google"></i></a>
+      <a className="btn btn-outline-light btn-floating m-1" style={{backgroundColor:"#ffc107"}} href="#!"  role="button"
+        ><i className="fab fa-google">Google</i></a>
 
       
-      <a className="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-        ><i className="fab fa-instagram"></i></a>
+      <a className="btn btn-outline-light btn-floating m-1" style={{backgroundColor:"#ffc107"}} href="#!"  role="button"
+        ><i className="fab fa-instagram">Instagram</i></a>
 
       
-      <a className="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-        ><i className="fab fa-linkedin-in"></i></a>
+      <a className="btn btn-outline-light btn-floating m-1" style={{backgroundColor:"#ffc107"}} href="#!"  role="button"
+        ><i className="fab fa-linkedin-in">Linkedin</i></a>
 
       
-      <a className="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-        ><i className="fab fa-github"></i></a>
+      <a className="btn btn-outline-light btn-floating m-1" style={{backgroundColor:"#ffc107"}} href="#!"  role="button"
+        ><i className="fab fa-github">GitHub</i></a>
     </section>
     
 

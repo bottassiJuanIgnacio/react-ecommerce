@@ -5,16 +5,23 @@ import Boton from './components/Boton';
 import NavBar from './components/NavBar';
 import Cards from './components/Cards';
 import Footer from './components/Footer';
+import ItemListContainer from './components/ItemListContainer';
+
+
+
 
 function App() {
-  let inicial = 15;
-  let color = "#ffc107";
+  const inicial = 15;
+  const warning = "#ffc107";
+  const greeting = 'Hello Gyro';
+
   return (
     <div className='bg-dark'>
       <NavBar />
-      <Boton  conteoInicial={inicial} color ={color}/>
+      <ItemListContainer warning ={warning} greeting= {greeting}/>
+      <Boton  conteoInicial={inicial} warning ={warning}/>
       <div className="d-flex justify-content-around ">
-        <Cards />
+        <Cards style={{margin : '5px'}} />
         <Cards />
         <Cards />
       </div>

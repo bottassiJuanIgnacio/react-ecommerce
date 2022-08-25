@@ -1,4 +1,6 @@
 import React from "react";
+import CartWidget from './CartWidget';
+
 //, { useState, useEffect }
 export default function NavBar() {
   return (
@@ -11,16 +13,20 @@ export default function NavBar() {
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
       <ul className="navbar-nav me-auto mb-2 mb-lg-0">
         <li className="nav-item">
-          <a className="nav-link active" aria-current="page" href="#/">Nosotros</a>
+          <a className="nav-link active" aria-current="page" href="#/">Suplementos</a>
         </li>
         <li className="nav-item">
-          <a className="nav-link" href="#/">Contactanos</a>
+          <a className="nav-link" href="#/">Accesorios</a>
+        </li>
+        <li className="nav-item">
+          <a className="nav-link" href="#/">Contacto</a>
         </li>
       </ul>
       <form className="d-flex"  role="search">
         <input className="form-control me-2 " type="search" placeholder="Search" aria-label="Search" />
         <button className="btn btn-outline-success bg-dark" type="buttonbuttonsubmit">Search</button>
       </form>
+      <CartWidget />
     </div>
   </div>
 </nav>
