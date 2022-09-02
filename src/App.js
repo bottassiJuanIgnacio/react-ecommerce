@@ -8,7 +8,9 @@ import Footer from './components/Footer';
 import ItemListContainer from './components/ItemListContainer';
 import Promesas from './test/Promesas';
 import FetchContainer from './test/FetchContainer';
-
+import FetchArrayContainer from './test/FetchArrayContainer';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+// shift alt o
 
 
 
@@ -20,19 +22,43 @@ function App() {
   const greeting = 'Hello Gyro';
 
   return (
-    <div className='bg-dark'>
-      <NavBar />
-      <ItemListContainer warning ={warning} greeting= {greeting}/>
-      <ItemCount  initial={initial} warning ={warning} stock ={stock} onAdd= {onAdd} />
-      <div className="d-flex justify-content-around ">
-        <Cards style={{margin : '5px'}} />
-        <Cards />
-        <Cards />
-      </div>
-      <FetchContainer />
-      <Promesas />
+    <BrowserRouter>
+      <NavBar/>
+      <Routes>
+        <Route path='/' element={<ItemListContainer warning ={warning} greeting= {greeting}/>}/>
+        <Route path='/category/:idcategory' element={<ItemListContainer />} />
+        <Route path='/product/:idproduct' element={<Cards style={{margin : '5px'}} />} />
+        <Route />
+      </Routes>
       <Footer />
-    </div>
+    </BrowserRouter>
+    // <div className='bg-dark'>
+    //   <NavBar />
+    //   <ItemListContainer warning ={warning} greeting= {greeting}/>
+    //   <ItemCount  initial={initial} warning ={warning} stock ={stock} onAdd= {onAdd} />
+    //   <div className="d-flex justify-content-around ">
+    //     <Cards style={{margin : '5px'}} />
+    //     <Cards />
+    //     <Cards />
+    //   </div>
+    //   <FetchContainer />
+    //   {/* <FetchArrayContainer /> */}
+    //   <Promesas />
+    //   <Footer />
+    // </div>
+    // <>
+    //   <BrowserRouter>
+    //     {/*Aca van todos los componentes presentes en todas las rutas*/}
+    //     <NavBar />
+    //     <Routes>
+    //       <Route path='/' element={<ItemListContainer />} />
+    //       <Route path='/category/:idcategory' element={<ItemListContainer />}/>
+    //       <Route path='/product/:idproduct' element={<ItemListContainer />}{<Cards />}/>{/*ItemDetailContainer*/}
+    //     </Routes>
+    //     <Footer />
+    //   </BrowserRouter>
+    // </>
+
   );
 }
 

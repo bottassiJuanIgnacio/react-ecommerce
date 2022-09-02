@@ -1,6 +1,13 @@
 import React from 'react'
+import { useParams } from 'react-router-dom';
+
+
 
 export default function Cards() {
+  const { idcategory, idproduct } = useParams();
+
+  
+
   return (
     <div className="card d-flex justify-content-around text-bg-secondary margin-5rem" style={{ width: '18rem' }}>
   <img src="https://via.placeholder.com/350x350" className="card-img-top" alt="placeholder" />
