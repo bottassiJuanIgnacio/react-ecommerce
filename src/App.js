@@ -7,6 +7,7 @@ import Cards from './components/Cards';
 import Footer from './components/Footer';
 import ItemListContainer from './components/ItemListContainer';
 import Promesas from './test/Promesas';
+import Eventos from './test/Eventos';
 import FetchContainer from './test/FetchContainer';
 import FetchArrayContainer from './test/FetchArrayContainer';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -25,6 +26,7 @@ function App() {
     <BrowserRouter>
       <NavBar/>
       <Routes>
+        <Route path='/eventos' element={<Eventos />} />
         <Route path='/' element={<ItemListContainer warning ={warning} greeting= {greeting}/>}/>
         <Route path='/category/:idcategory' element={<ItemListContainer />} />
         <Route path='/product/:idproduct' element={<Cards style={{margin : '5px'}} />} />

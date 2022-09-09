@@ -1,26 +1,39 @@
-import React, {useState, useEffect} from 'react'
+import React,{useState, useEffect} from 'react'
+import ItemList from './ItemList'
+import {data} from '../mocks/dataBase'
 import { useParams } from 'react-router-dom'
 
-const productsHC = [{}]
 
-export default function ItemListContainer(props) {
-    const {warning, greeting} = props
-    const {idcategory, idproduct} = useParams();
-    const [products, setProducts] = useState();
+const ItemListContainer = ({saludo, greeting}) => {
+  const [productList, setProductList]=useState([])
+  const [loading, setLoading]= useState(false)
+  const{categoriaId}= useParams()
 
-      useEffect(() => {
-        if (!idcategory){
-          setProducts(productsHC);
-        }else {
-          setProducts(productsHC.filter(product => product.idcategory == idcategory))
-        }
+useEffect(()=>{
+  setLoading(true)
+    data
+    .then((res)=>{
+      if(categoriaId){
+        setProductList(res.filter((item)=> item.category === categoriaId))
+      }else{
+        setProductList(res)
+      }
+    })
+    .catch((error)=> console.log(error))
+    .finally(()=> setLoading(false))
+  }, [categoriaId])
 
-      }, [idcategory]);
 
 
+
+  
   return (
-    <div>
-        <h3 style={{color : warning}}>{greeting}!!</h3>
+    <div style={{padding:'3rem'}}>
+        <p>{saludo}</p>
+        <p>{greeting}</p>
+      {loading ? <p>Cargando...</p>:<ItemList productList={productList}/>}
     </div>
   )
 }
+
+export default ItemListContainer
