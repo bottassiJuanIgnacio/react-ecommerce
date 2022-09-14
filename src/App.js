@@ -1,24 +1,18 @@
 import './App.css';
 // css bootstrap
 import 'bootstrap/dist/css/bootstrap.min.css';
-import ItemCount from './components/ItemCount';
-import NavBar from './components/NavBar';
-import Cards from './components/Cards';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Footer from './components/Footer';
+import ItemDetailContainer from './components/ItemDetailContainer';
 import ItemListContainer from './components/ItemListContainer';
-import Promesas from './test/Promesas';
+import NavBar from './components/NavBar';
 import Eventos from './test/Eventos';
-import FetchContainer from './test/FetchContainer';
-import FetchArrayContainer from './test/FetchArrayContainer';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
 // shift alt o
-
+import Test from './test/Test';
 
 
 function App() {
-  const initial = 1;
-  const stock = 10;
-  const onAdd = () => { alert("Agregar al carrito productos")};
+  
   const warning = "#ffc107";
   const greeting = 'Hello Gyro';
 
@@ -26,10 +20,11 @@ function App() {
     <BrowserRouter>
       <NavBar/>
       <Routes>
+        <Route path="/test"  element= {<Test/>} />
         <Route path='/eventos' element={<Eventos />} />
         <Route path='/' element={<ItemListContainer warning ={warning} greeting= {greeting}/>}/>
         <Route path='/category/:idcategory' element={<ItemListContainer />} />
-        <Route path='/product/:idproduct' element={<Cards style={{margin : '5px'}} />} />
+        <Route path='/product/:idproduct' element={<ItemDetailContainer/>} />
         <Route />
       </Routes>
       <Footer />
