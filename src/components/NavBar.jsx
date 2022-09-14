@@ -14,13 +14,13 @@ export default function NavBar() {
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
       <ul className="navbar-nav me-auto mb-2 mb-lg-0">
         <li className="nav-item">
-        <NavLink className="nav-link active" aria-current="page" to='/categoria/nuevos'>Nuevos</NavLink>
+        <NavLink className="nav-link active" aria-current="page" to='/category/nuevos'>Nuevos</NavLink>
         </li>
         <li className="nav-item">
-        <NavLink className="nav-link active" aria-current="page" to='/categoria/oferta'>Ofertas</NavLink>
+        <NavLink className="nav-link active" aria-current="page" to='/category/oferta'>Ofertas</NavLink>
         </li>
         <li className="nav-item">
-        <NavLink className="nav-link active" aria-current="page" to='/categoria/vendidos'>Mas Vendidos</NavLink>
+        <NavLink className="nav-link active" aria-current="page" to='/category/vendidos'>Mas Vendidos</NavLink>
           {/* <a className="nav-link" href="#/">Contacto</a> */}
         </li>
       </ul>
