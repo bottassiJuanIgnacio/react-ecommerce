@@ -1,4 +1,4 @@
-const productos = [{id:1,name:"Job",category:"nuevos",description:"Disp fx of base of nk of l femr, 7thG",price:8,img:'https://picsum.photos/201',stock:5},
+const productos = [{id:"1",name:"Job",category:"nuevos",description:"Disp fx of base of nk of l femr, 7thG",price:8,img:'https://picsum.photos/201',stock:5},
 {id:"2",name:"Sondra",category:"nuevos",description:"Oth traumatic displ spondylolysis of fifth cervcal vertebra",price:76,img:'https://picsum.photos/202',stock:4},
 {id:"3",name:"Marius",category:"nuevos",description:"Chronic gout due to renal impairment, unsp hand, with tophus",price:55,img:'https://picsum.photos/203',stock:10},
 {id:"4",name:"Camala",category:"oferta",description:"Superficial foreign body, right great toe, initial encounter",price:57,img:'https://picsum.photos/204',stock:18},

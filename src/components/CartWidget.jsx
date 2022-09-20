@@ -1,9 +1,11 @@
 import React from 'react'
+import { useCart } from '../context/CartContext';
 
 export default function CartWidget() {
+  const{cartQuantity, cart} =useCart()
   return (
-    <div style= {{ margin: '10px' }}>
-        <button type="button" className="btn btn-outline-dark">🛒 4</button>
+    <div>
+        <span>{cartQuantity() || ''}</span>
     </div>
   )
 }

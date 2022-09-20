@@ -28,7 +28,9 @@ export default function NavBar() {
         <input className="form-control me-2 " type="search" placeholder="Search" aria-label="Search" />
         <button className="btn btn-outline-success bg-dark" type="buttonbuttonsubmit">Search</button>
       </form>
-      <CartWidget />
+      <NavLink to='/cart' className="nav-link active">
+        <CartWidget />
+      </NavLink>
     </div>
   </div>
 </nav>

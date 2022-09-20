@@ -1,29 +1,29 @@
-import React, { useState } from "react";
+import React from 'react'
 
-
-export default function ItemCount({initial, warning, stock, onAdd}) {
+const ItemCount = ({initial, stock, onAdd, count, setCount}) => {
   
-    
-  const [contador, setContador] = useState(initial);
-    
- 
+    const restar = () => {
+        if(count > initial){
+            setCount(count-1)
+        }
+    }
 
-    
+    const sumar=()=>{
+        if(count<stock){
+            setCount(count + 1)
+        }
+    }
+
   return (
+    <>
     <div>
-        <h1 style={{color : warning }}> CONTADOR : {contador}</h1>
-
-        <button className='btn btn-danger' style={{color : "#343a40", backgroundColor : warning}} onClick= {() => {
-          setContador(contador <= initial ? setContador:  contador - 1);
-        } }> - </button>
-
-        <button className='btn btn-success' style={{color : "#343a40", backgroundColor : warning}} onClick= {() => {
-        setContador(contador < stock ? contador + 1 :  setContador);
-        } }> + </button>
-
-
-
-        <button className='btn btn-primary m-3' onClick={ onAdd} > Agregar al carrito </button>
+        <button className='btn btn-success' onClick={sumar}>+</button>
+        <span  className='btn btn-light'>{count}</span>
+        <button  className='btn btn-danger'onClick={restar}>-</button>
     </div>
+        <button  className='btn btn-primary m-3'onClick={onAdd}>comprar</button>
+    </>
   )
 }
+
+export default ItemCount
