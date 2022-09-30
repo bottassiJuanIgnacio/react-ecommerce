@@ -2,7 +2,7 @@ import React from "react";
 import CartWidget from './CartWidget';
 import { NavLink } from 'react-router-dom'
 
-//, { useState, useEffect }
+
 export default function NavBar() {
   return (
     <nav className="navbar navbar-expand-lg bg-warning">

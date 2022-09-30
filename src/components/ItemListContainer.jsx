@@ -1,7 +1,9 @@
 import React,{useState, useEffect} from 'react'
 import ItemList from './ItemList'
-import {data} from '../mocks/dataBase'
 import { useParams } from 'react-router-dom'
+import { collection, getDocs, query, where } from 'firebase/firestore'
+import { db } from '../firebase/Firebase'
+//import {data} from '../mocks/dataBase'
 
 
 const ItemListContainer = ({saludo, greeting}) => {
@@ -9,24 +11,28 @@ const ItemListContainer = ({saludo, greeting}) => {
   const [loading, setLoading]= useState(false)
   const{categoriaId}= useParams()
 
+//firebase
+
 useEffect(()=>{
   setLoading(true)
-    data
-    .then((res)=>{
-      if(categoriaId){
-        setProductList(res.filter((item)=> item.category === categoriaId))
-      }else{
-        setProductList(res)
+  const coleccionProductos= categoriaId ? query(collection(db, "products"), where("category", "==", categoriaId)) : collection(db, "products")
+  getDocs(coleccionProductos)
+  .then((result)=> {
+    const lista = result.docs.map((producto)=>{
+      return{
+        id:producto.id,
+        ...producto.data()
       }
     })
-    .catch((error)=> console.log(error))
-    .finally(()=> setLoading(false))
-  }, [categoriaId])
+    setProductList(lista)
+  })
+  .catch((error)=> console.log(error))
+  .finally(()=> setLoading(false))
+}, [categoriaId])
 
 
 
-
-  
+  console.log(productList)
   return (
     <div style={{padding:'3rem'}}>
         <p>{saludo}</p>
