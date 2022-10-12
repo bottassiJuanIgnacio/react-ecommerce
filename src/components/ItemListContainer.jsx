@@ -6,7 +6,7 @@ import { db } from '../firebase/Firebase'
 //import {data} from '../mocks/dataBase'
 
 
-const ItemListContainer = ({saludo, greeting}) => {
+const ItemListContainer = ({warning, greeting}) => {
   const [productList, setProductList]=useState([])
   const [loading, setLoading]= useState(false)
   const{categoriaId}= useParams()
@@ -34,7 +34,7 @@ useEffect(()=>{
 
   console.log(productList)
   return (
-    <div style={{padding:'3rem'}}>
+    <div style={{padding:'3rem', backgroundColor: '#212529'}}>
         <p>{saludo}</p>
         <p>{greeting}</p>
       {loading ? <p>Cargando...</p>:<ItemList productList={productList}/>}
