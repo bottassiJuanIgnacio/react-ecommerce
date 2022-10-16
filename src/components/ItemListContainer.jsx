@@ -6,7 +6,7 @@ import { db } from '../firebase/Firebase'
 //import {data} from '../mocks/dataBase'
 
 
-const ItemListContainer = ({warning, greeting}) => {
+const ItemListContainer = ({saludo, warning, greeting}) => {
   const [productList, setProductList]=useState([])
   const [loading, setLoading]= useState(false)
   const{categoriaId}= useParams()

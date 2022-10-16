@@ -15,7 +15,7 @@ import Test from './test/Test';
 
 
 function App() {
-  
+  const saludo = 'Hola Gyros!'
   const warning = "#ffc107";
   const greeting = 'Hello Gyro';
 
@@ -25,7 +25,7 @@ function App() {
         <NavBar/>
         <Routes>
           
-          <Route path='/' element={<ItemListContainer warning ={warning} greeting= {greeting}/>}/>
+          <Route path='/' element={<ItemListContainer warning ={warning} saludo={saludo} greeting= {greeting}/>}/>
           <Route path='/category/:categoriaId' element={<ItemListContainer />} />
           <Route path='/detalle/:id' element={<ItemDetailContainer/>} />
           <Route path='/cart' element={<Cart/>}/>
