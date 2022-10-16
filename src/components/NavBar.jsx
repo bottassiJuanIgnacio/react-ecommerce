@@ -21,7 +21,6 @@ export default function NavBar() {
         </li>
         <li className="nav-item">
         <NavLink className="nav-link active" aria-current="page" to='/category/vendidos'>Mas Vendidos</NavLink>
-          {/* <a className="nav-link" href="#/">Contacto</a> */}
         </li>
       </ul>
       <form className="d-flex"  role="search">

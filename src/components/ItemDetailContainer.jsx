@@ -11,13 +11,7 @@ const ItemDetailContainer = () => {
     const{id}=useParams()
 
      
-      //mock
-    // useEffect(()=>{
-    //     data
-    //     .then((res)=> setProductDetail(res.find((item)=> item.id === id)))
-    //     .catch((error)=> console.log(error))
-    //     .finally(()=> setLoading(false))
-    // },[id])
+    
 
     //firebase
 

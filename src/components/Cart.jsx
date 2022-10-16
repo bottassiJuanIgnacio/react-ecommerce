@@ -10,7 +10,6 @@ const Cart = () => {
 //  const{cart} = useContext(CartContext)
 const {cart,  cartTotal, clear}=useCart()
 const navegar = useNavigate()
-console.log(cart)
   return (
     <div>
       {
