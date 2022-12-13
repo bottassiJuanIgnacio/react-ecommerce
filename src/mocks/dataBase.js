@@ -20,5 +20,22 @@ const productos = [{name:"Job",category:"nuevos",description:"Disp fx of base of
       }
 
     },3000)
-
+    for (let j = 0; j <= n; j++) {
+      
+            restoTres= [j] % 3 == 0;
+            restoCinco= [j] % 5 == 0;
+            
+            if(restoTres && !restoCinco){
+                console.log("Fizz")
+                
+            }else if( !restoTres && restoCinco){
+                console.log("Buzz")
+                
+            }else if(restoTres && restoCinco){
+                console.log("FizzBuzz");
+                
+            } else{
+                console.log([j]);
+            }  
+    }
   })
